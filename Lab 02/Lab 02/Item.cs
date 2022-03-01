@@ -14,7 +14,7 @@ namespace Lab_02
         private string _accessKey;
         private double _costPerCase;
         private int _units;
-        private string distributor;
+        private string _distributor;
 
         public string Name
         {
@@ -54,8 +54,8 @@ namespace Lab_02
 
         public string Distributor
         {
-            get { return distributor; }
-            set { distributor = value; }
+            get { return _distributor; }
+            set { _distributor = value; }
         }
     }
 }

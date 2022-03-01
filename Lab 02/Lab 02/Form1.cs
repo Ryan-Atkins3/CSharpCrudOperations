@@ -16,5 +16,18 @@ namespace Lab_02
         {
             InitializeComponent();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            //read all new text data
+            string newItemName = txtNewItemName.Text;
+            string newItemUpc = txtNewItemUPC.Text;
+            double newStoreItemPrice = Convert.ToDouble(txtNewItemStorePrice.Text);
+            string newItemAccessKey = txtNewItemAccessKey.Text;
+            double newItemCostPerCase = Convert.ToDouble(txtNewItemCostPerCase.Text);
+            int newItemUnitsPerCase = Convert.ToInt32(txtNewItemUnitsPerCase.Text);
+            string newItemDistributor = txtNewItemDistributor.Text;
+
+        }
     }
 }
