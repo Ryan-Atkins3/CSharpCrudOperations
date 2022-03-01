@@ -140,38 +140,51 @@ namespace Lab_02
             int newItemUnitsPerCase = Convert.ToInt32(txtNewItemUnitsPerCase.Text);
             string newItemDistributor = txtNewItemDistributor.Text;
 
-            if (newItemAccessKey == "1234")
-            {
-                products.Add(new Item()
-                {
-                    Name = newItemName,
-                    Upc = newItemUpc,
-                    StorePrice = newStoreItemPrice,
-                    AccessKey = newItemAccessKey,
-                    CostPerCase = newItemCostPerCase,
-                    UnitCount = newItemUnitsPerCase,
-                    Distributor = newItemDistributor,
-                });
-                txtNewItemAccessKey.Text = "";
-                txtNewItemCostPerCase.Text = "";
-                txtNewItemDistributor.Text = "";
-                txtNewItemName.Text = "";
-                txtNewItemStorePrice.Text = "";
-                txtNewItemUnitsPerCase.Text = "";
-                txtNewItemUPC.Text = "";
-            }
 
-            else
+            for (int i = 0; i < products.Count; i++)
             {
-                lblAddItemAccessErrorMessage.Text = "Access Key Incorrect";
+                if (products[i].Upc != newItemUpc)
+                {
+                    if (newItemAccessKey == "1234")
+                    {
+                        products.Add(new Item()
+                        {
+                            Name = newItemName,
+                            Upc = newItemUpc,
+                            StorePrice = newStoreItemPrice,
+                            AccessKey = newItemAccessKey,
+                            CostPerCase = newItemCostPerCase,
+                            UnitCount = newItemUnitsPerCase,
+                            Distributor = newItemDistributor,
+                        });
+                        txtNewItemAccessKey.Text = "";
+                        txtNewItemCostPerCase.Text = "";
+                        txtNewItemDistributor.Text = "";
+                        txtNewItemName.Text = "";
+                        txtNewItemStorePrice.Text = "";
+                        txtNewItemUnitsPerCase.Text = "";
+                        txtNewItemUPC.Text = "";
+                    }
+
+                    else
+                    {
+                        lblAddItemAccessErrorMessage.Text = "Access Key Incorrect";
+                    }
+                }
+                else
+                {
+                    lblAddItemAccessErrorMessage.Text = "UPC is duplicated!";
+                }
             }
+            
         }
 
         private void btnUpdatePrice_Click(object sender, EventArgs e)
         {
             if (txtChangePriceAccessKey.Text == "1234")
             {
-                products[foundPosition].StorePrice = Convert.ToDouble(txtNewPrice);
+                products[foundPosition].StorePrice = Convert.ToDouble(txtNewPrice.Text);
+                lblStorePrice.Text = $"{products[foundPosition].StorePrice:C}";
             }
             else
             {
