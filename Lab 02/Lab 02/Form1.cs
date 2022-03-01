@@ -178,5 +178,17 @@ namespace Lab_02
             }
             
         }
+
+        private void btnUpdatePrice_Click(object sender, EventArgs e)
+        {
+            if (txtChangePriceAccessKey.Text == "1234")
+            {
+                products[foundPosition].StorePrice = Convert.ToDouble(txtNewPrice);
+            }
+            else
+            {
+                lblChangePriceAccessKeyError.Text = "Access Key Incorrect";
+            }
+        }
     }
 }

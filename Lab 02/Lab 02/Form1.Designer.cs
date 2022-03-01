@@ -75,6 +75,7 @@
             this.txtNewItemDistributor = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.lblAddItemAccessErrorMessage = new System.Windows.Forms.Label();
+            this.lblChangePriceAccessKeyError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -321,6 +322,7 @@
             this.btnUpdatePrice.TabIndex = 28;
             this.btnUpdatePrice.Text = "Update Price";
             this.btnUpdatePrice.UseVisualStyleBackColor = true;
+            this.btnUpdatePrice.Click += new System.EventHandler(this.btnUpdatePrice_Click);
             // 
             // btnDeleteItem
             // 
@@ -470,11 +472,20 @@
             this.lblAddItemAccessErrorMessage.Size = new System.Drawing.Size(0, 20);
             this.lblAddItemAccessErrorMessage.TabIndex = 46;
             // 
+            // lblChangePriceAccessKeyError
+            // 
+            this.lblChangePriceAccessKeyError.AutoSize = true;
+            this.lblChangePriceAccessKeyError.Location = new System.Drawing.Point(38, 480);
+            this.lblChangePriceAccessKeyError.Name = "lblChangePriceAccessKeyError";
+            this.lblChangePriceAccessKeyError.Size = new System.Drawing.Size(0, 20);
+            this.lblChangePriceAccessKeyError.TabIndex = 47;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 767);
+            this.Controls.Add(this.lblChangePriceAccessKeyError);
             this.Controls.Add(this.lblAddItemAccessErrorMessage);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtNewItemDistributor);
@@ -578,6 +589,7 @@
         private System.Windows.Forms.TextBox txtNewItemDistributor;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lblAddItemAccessErrorMessage;
+        private System.Windows.Forms.Label lblChangePriceAccessKeyError;
     }
 }
 
