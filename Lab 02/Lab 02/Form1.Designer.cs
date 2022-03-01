@@ -109,6 +109,7 @@
             this.btnNameSearch.TabIndex = 3;
             this.btnNameSearch.Text = "Search";
             this.btnNameSearch.UseVisualStyleBackColor = true;
+            this.btnNameSearch.Click += new System.EventHandler(this.btnNameSearch_Click);
             // 
             // txtUPCSearch
             // 
@@ -125,6 +126,7 @@
             this.btnUPCSearch.TabIndex = 5;
             this.btnUPCSearch.Text = "Search";
             this.btnUPCSearch.UseVisualStyleBackColor = true;
+            this.btnUPCSearch.Click += new System.EventHandler(this.btnUPCSearch_Click);
             // 
             // label3
             // 
@@ -185,54 +187,48 @@
             this.lblName.AutoSize = true;
             this.lblName.Location = new System.Drawing.Point(142, 127);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(51, 20);
+            this.lblName.Size = new System.Drawing.Size(0, 20);
             this.lblName.TabIndex = 12;
-            this.lblName.Text = "label9";
             // 
             // lblUPC
             // 
             this.lblUPC.AutoSize = true;
             this.lblUPC.Location = new System.Drawing.Point(142, 166);
             this.lblUPC.Name = "lblUPC";
-            this.lblUPC.Size = new System.Drawing.Size(51, 20);
+            this.lblUPC.Size = new System.Drawing.Size(0, 20);
             this.lblUPC.TabIndex = 13;
-            this.lblUPC.Text = "label9";
             // 
             // lblStorePrice
             // 
             this.lblStorePrice.AutoSize = true;
-            this.lblStorePrice.Location = new System.Drawing.Point(146, 205);
+            this.lblStorePrice.Location = new System.Drawing.Point(139, 205);
             this.lblStorePrice.Name = "lblStorePrice";
-            this.lblStorePrice.Size = new System.Drawing.Size(51, 20);
+            this.lblStorePrice.Size = new System.Drawing.Size(0, 20);
             this.lblStorePrice.TabIndex = 14;
-            this.lblStorePrice.Text = "label9";
             // 
             // lblCostPerCase
             // 
             this.lblCostPerCase.AutoSize = true;
             this.lblCostPerCase.Location = new System.Drawing.Point(539, 127);
             this.lblCostPerCase.Name = "lblCostPerCase";
-            this.lblCostPerCase.Size = new System.Drawing.Size(51, 20);
+            this.lblCostPerCase.Size = new System.Drawing.Size(0, 20);
             this.lblCostPerCase.TabIndex = 15;
-            this.lblCostPerCase.Text = "label9";
             // 
             // lblUnitsPerCase
             // 
             this.lblUnitsPerCase.AutoSize = true;
             this.lblUnitsPerCase.Location = new System.Drawing.Point(539, 167);
             this.lblUnitsPerCase.Name = "lblUnitsPerCase";
-            this.lblUnitsPerCase.Size = new System.Drawing.Size(51, 20);
+            this.lblUnitsPerCase.Size = new System.Drawing.Size(0, 20);
             this.lblUnitsPerCase.TabIndex = 16;
-            this.lblUnitsPerCase.Text = "label9";
             // 
             // lblDistributor
             // 
             this.lblDistributor.AutoSize = true;
             this.lblDistributor.Location = new System.Drawing.Point(539, 205);
             this.lblDistributor.Name = "lblDistributor";
-            this.lblDistributor.Size = new System.Drawing.Size(51, 20);
+            this.lblDistributor.Size = new System.Drawing.Size(0, 20);
             this.lblDistributor.TabIndex = 17;
-            this.lblDistributor.Text = "label9";
             // 
             // label9
             // 
