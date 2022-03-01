@@ -76,6 +76,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.lblAddItemAccessErrorMessage = new System.Windows.Forms.Label();
             this.lblChangePriceAccessKeyError = new System.Windows.Forms.Label();
+            this.lblDeleteItemError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -332,6 +333,7 @@
             this.btnDeleteItem.TabIndex = 29;
             this.btnDeleteItem.Text = "Delete Item";
             this.btnDeleteItem.UseVisualStyleBackColor = true;
+            this.btnDeleteItem.Click += new System.EventHandler(this.btnDeleteItem_Click);
             // 
             // label15
             // 
@@ -480,11 +482,20 @@
             this.lblChangePriceAccessKeyError.Size = new System.Drawing.Size(0, 20);
             this.lblChangePriceAccessKeyError.TabIndex = 47;
             // 
+            // lblDeleteItemError
+            // 
+            this.lblDeleteItemError.AutoSize = true;
+            this.lblDeleteItemError.Location = new System.Drawing.Point(480, 479);
+            this.lblDeleteItemError.Name = "lblDeleteItemError";
+            this.lblDeleteItemError.Size = new System.Drawing.Size(0, 20);
+            this.lblDeleteItemError.TabIndex = 48;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 767);
+            this.Controls.Add(this.lblDeleteItemError);
             this.Controls.Add(this.lblChangePriceAccessKeyError);
             this.Controls.Add(this.lblAddItemAccessErrorMessage);
             this.Controls.Add(this.btnAdd);
@@ -590,6 +601,7 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lblAddItemAccessErrorMessage;
         private System.Windows.Forms.Label lblChangePriceAccessKeyError;
+        private System.Windows.Forms.Label lblDeleteItemError;
     }
 }
 

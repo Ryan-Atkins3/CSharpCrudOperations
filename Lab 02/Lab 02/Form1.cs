@@ -194,36 +194,34 @@ namespace Lab_02
 
         private void btnDeleteItem_Click(object sender, EventArgs e)
         {
-            if(txtVerifyUPC.Text == "1234-5678")
-                if(txtDeleteItemAccessKey.Text == "1234")
+            string accessKey = txtDeleteItemAccessKey.Text;
+            string verifyUpc = txtVerifyUPC.Text;
+            if (accessKey == "1234")
+            {
+                for (int i = 0; i < products.Count; i++)
                 {
-                    products[foundPosition].Upc = String.Format("");
-                }
-                else if(txtVerifyUPC.Text == "9875-4321")
-                    if (txtDeleteItemAccessKey.Text == "1234")
+                    if (products[i].Upc == verifyUpc)
                     {
-                        products[foundPosition].Upc = String.Format("");
+                        products.RemoveAt(i);
+                        lblName.Text = "";
+                        lblStorePrice.Text = "";
+                        lblCostPerCase.Text = "";
+                        lblDistributor.Text = "";
+                        lblUnitsPerCase.Text = "";
+                        lblUPC.Text = "";
+                        break;
                     }
-                 else if (txtVerifyUPC.Text == "1000-1000")
-                        if (txtDeleteItemAccessKey.Text == "1234")
-                        {
-                            products[foundPosition].Upc = String.Format("");
-                        }
-                 else if (txtVerifyUPC.Text == "1000-1000")
-                        if (txtDeleteItemAccessKey.Text == "1234")
-                        {
-                            products[foundPosition].Upc = String.Format("");
-                        }
-                  else if (txtVerifyUPC.Text == "1738-1738")
-                         if (txtDeleteItemAccessKey.Text == "1234")
-                         {
-                            products[foundPosition].Upc = String.Format("");
-                         }
-                  else if (txtVerifyUPC.Text == "4321-1234")
-                         if (txtDeleteItemAccessKey.Text == "1234")
-                         {
-                            products[foundPosition].Upc = String.Format("");
-                         }
+                    else if (products[i].Upc != verifyUpc && i == products.Count)
+                    {
+                        lblDeleteItemError.Text = "UPC does not match";
+                    }
+                    
+                }
+            }
+            else
+            {
+                lblDeleteItemError.Text = "Access Key Don't match";
+            }
         }
     }
 }
