@@ -138,6 +138,21 @@ namespace Lab_02
             int newItemUnitsPerCase = Convert.ToInt32(txtNewItemUnitsPerCase.Text);
             string newItemDistributor = txtNewItemDistributor.Text;
 
+            products.Add(new Item()
+            {
+                Name = newItemName,
+                Upc = newItemUpc,
+                StorePrice = newStoreItemPrice,
+                AccessKey = newItemAccessKey,
+                CostPerCase = newItemCostPerCase,
+                UnitCount = newItemUnitsPerCase,
+                Distributor = newItemDistributor,
+            });
+            txtNewItemAccessKey.Text = "";
+            txtNewItemCostPerCase.Text = "";
+            txtNewItemDistributor.Text = "";
+            txtNewItemName.Text = "";
+            txtNewItemStorePrice.Text = "";
         }
     }
 }
