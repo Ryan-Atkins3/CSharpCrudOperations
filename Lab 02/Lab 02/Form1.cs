@@ -178,5 +178,39 @@ namespace Lab_02
                 lblChangePriceAccessKeyError.Text = "Access Key Incorrect";
             }
         }
+
+        private void btnDeleteItem_Click(object sender, EventArgs e)
+        {
+            if(txtVerifyUPC.Text == "1234-5678")
+                if(txtDeleteItemAccessKey.Text == "1234")
+                {
+                    products[foundPosition].Upc = String.Format("");
+                }
+                else if(txtVerifyUPC.Text == "9875-4321")
+                    if (txtDeleteItemAccessKey.Text == "1234")
+                    {
+                        products[foundPosition].Upc = String.Format("");
+                    }
+                 else if (txtVerifyUPC.Text == "1000-1000")
+                        if (txtDeleteItemAccessKey.Text == "1234")
+                        {
+                            products[foundPosition].Upc = String.Format("");
+                        }
+                 else if (txtVerifyUPC.Text == "1000-1000")
+                        if (txtDeleteItemAccessKey.Text == "1234")
+                        {
+                            products[foundPosition].Upc = String.Format("");
+                        }
+                  else if (txtVerifyUPC.Text == "1738-1738")
+                         if (txtDeleteItemAccessKey.Text == "1234")
+                         {
+                            products[foundPosition].Upc = String.Format("");
+                         }
+                  else if (txtVerifyUPC.Text == "4321-1234")
+                         if (txtDeleteItemAccessKey.Text == "1234")
+                         {
+                            products[foundPosition].Upc = String.Format("");
+                         }
+        }
     }
 }
