@@ -16,6 +16,8 @@ namespace Lab_02
         private int _units;
         private string _distributor;
 
+
+
         public string Name
         {
             get { return _name; }
