@@ -183,7 +183,8 @@ namespace Lab_02
         {
             if (txtChangePriceAccessKey.Text == "1234")
             {
-                products[foundPosition].StorePrice = Convert.ToDouble(txtNewPrice);
+                products[foundPosition].StorePrice = Convert.ToDouble(txtNewPrice.Text);
+                lblStorePrice.Text = $"{products[foundPosition].StorePrice:C}";
             }
             else
             {
