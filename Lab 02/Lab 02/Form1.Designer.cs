@@ -74,6 +74,7 @@
             this.txtNewItemUnitsPerCase = new System.Windows.Forms.TextBox();
             this.txtNewItemDistributor = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.lblAddItemAccessErrorMessage = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -461,11 +462,20 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // lblAddItemAccessErrorMessage
+            // 
+            this.lblAddItemAccessErrorMessage.AutoSize = true;
+            this.lblAddItemAccessErrorMessage.Location = new System.Drawing.Point(40, 728);
+            this.lblAddItemAccessErrorMessage.Name = "lblAddItemAccessErrorMessage";
+            this.lblAddItemAccessErrorMessage.Size = new System.Drawing.Size(0, 20);
+            this.lblAddItemAccessErrorMessage.TabIndex = 46;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 767);
+            this.Controls.Add(this.lblAddItemAccessErrorMessage);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtNewItemDistributor);
             this.Controls.Add(this.txtNewItemUnitsPerCase);
@@ -567,6 +577,7 @@
         private System.Windows.Forms.TextBox txtNewItemUnitsPerCase;
         private System.Windows.Forms.TextBox txtNewItemDistributor;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Label lblAddItemAccessErrorMessage;
     }
 }
 

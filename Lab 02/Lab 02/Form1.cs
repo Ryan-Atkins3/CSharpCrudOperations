@@ -14,7 +14,7 @@ namespace Lab_02
     {
 
         List<Item> products = new List<Item>();
-
+        int foundPosition;
     public Form1()
         {
             InitializeComponent();
@@ -83,6 +83,7 @@ namespace Lab_02
                     lblCostPerCase.Text = $"{ products[i].CostPerCase:C}";
                     lblUnitsPerCase.Text = products[i].UnitCount.ToString();
                     lblDistributor.Text = products[i].Distributor.ToString();
+                    foundPosition = i;
 
                 }
             }
@@ -112,6 +113,7 @@ namespace Lab_02
                     lblCostPerCase.Text = $"{ products[i].CostPerCase:C}";
                     lblUnitsPerCase.Text = products[i].UnitCount.ToString();
                     lblDistributor.Text = products[i].Distributor.ToString();
+                    foundPosition = i;
                 }
             }
 
@@ -157,6 +159,11 @@ namespace Lab_02
                 txtNewItemStorePrice.Text = "";
                 txtNewItemUnitsPerCase.Text = "";
                 txtNewItemUPC.Text = "";
+            }
+
+            else
+            {
+                lblAddItemAccessErrorMessage.Text = "Access Key Incorrect";
             }
         }
     }
