@@ -211,7 +211,7 @@ namespace Lab_02
                         lblUPC.Text = "";
                         break;
                     }
-                    else if (products[i].Upc != verifyUpc && i == products.Count)
+                    else if (products[i].Upc != verifyUpc && i == products.Count-1)
                     {
                         lblDeleteItemError.Text = "UPC does not match";
                     }
@@ -220,7 +220,7 @@ namespace Lab_02
             }
             else
             {
-                lblDeleteItemError.Text = "Access Key Don't match";
+                lblDeleteItemError.Text = "Access Key Incorrect";
             }
         }
     }
